@@ -1,10 +1,11 @@
-import Container from "@/components/layout/Container";
-import Image from "next/image";
+import About from "@/components/sections/home/About";
+import Hero from "@/components/sections/home/hero";
 
 export default function Home() {
   return (
     <div>
-      <Container> Home</Container>
+      <Hero />
+      <About />
     </div>
   );
 }
