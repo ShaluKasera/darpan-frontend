@@ -21,20 +21,16 @@ const About = () => {
 
         {/* Right - Text */}
         <div className="w-full md:w-1/2">
-          <h2 className="text-[#FF7043] font-semibold text-lg mb-2">About Us</h2>
-          <h3 className="text-2xl md:text-3xl font-bold mb-4 leading-snug">
+          <p className="text-[#FF7043] font-bold text-2xl md:text-3xl mb-2">About Us</p>
+          <p className="text-2xl md:text-3xl font-bold mb-4 leading-snug">
             Empowering Underprivileged Children Through Education
-          </h3>
-          <p className="text-gray-800 text-sm leading-relaxed mb-6">
-            ICCHE is a student’s outreach programme, an initiative by Center of
-            Studies in Science, Technology and Culture started by students of
-            IIEST Shibpur in 2016 as an evening school under the Department of
-            Humanities and Social Sciences. Since 2016, it is providing a
-            supportive environment for underprivileged children.
+          </p>
+          <p className="text-gray-800 text-sm  leading-relaxed mb-6">
+            ICCHE a student's outstretch programme, an initiative by center of studies in science, technology and culture started by students of IIEST Shibpur in 2016 as an evening school under the Department ofHumanities and Social Sciences. Since, 2016 it is providing supportive environment for underprivileged children
           </p>
           <Button
             text="Read More"
-            className="bg-[#FF7043] w-[200px] text-white px-5 py-2 rounded font-semibold hover:bg-[#e25f32] transition"
+            className="bg-[#FF7043] w-[150px] text-white px-5 py-2 rounded font-semibold hover:bg-[#e25f32] transition"
           />
         </div>
       </div>
