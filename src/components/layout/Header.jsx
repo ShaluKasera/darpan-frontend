@@ -21,15 +21,7 @@ const Header = () => {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Gallery", href: "/gallery" },
-    {
-      name: "Event",
-      submenu: [
-        { name: "Festival", href: "/event/festival" },
-        { name: "Activites", href: "/event/activities" },
-        { name: "Farewell", href: "/event/farewell" },
-        { name: "Induction", href: "/event/induction" },
-      ],
-    },
+    { name: "Event", href: "/events" },
     { name: "Donation Drive", href: "/donation-drive" },
     {
       name: "About",
@@ -98,11 +90,10 @@ const Header = () => {
                   {link.submenu ? (
                     <>
                       <span
-                        className={`cursor-pointer hover:text-[#FF7043] transition-colors duration-200 ${
-                          pathname.startsWith("/" + link.name.toLowerCase())
-                            ? "text-[#FF7043]"
-                            : "text-black"
-                        }`}
+                        className={`cursor-pointer hover:text-[#FF7043] transition-colors duration-200 ${pathname.startsWith("/" + link.name.toLowerCase())
+                          ? "text-[#FF7043]"
+                          : "text-black"
+                          }`}
                       >
                         {link.name}
                       </span>
@@ -122,9 +113,8 @@ const Header = () => {
                   ) : (
                     <Link
                       href={link.href}
-                      className={`hover:text-[#FF7043] transition-colors duration-200 ${
-                        isActiveLink(link.href) ? "text-[#FF7043]" : "text-black"
-                      }`}
+                      className={`hover:text-[#FF7043] transition-colors duration-200 ${isActiveLink(link.href) ? "text-[#FF7043]" : "text-black"
+                        }`}
                     >
                       {link.name}
                     </Link>
@@ -150,11 +140,10 @@ const Header = () => {
                     <li>
                       <Link
                         href={link.href}
-                        className={`block py-1 px-2 rounded hover:bg-gray-100 ${
-                          isActiveLink(link.href)
-                            ? "text-[#FF7043] font-medium"
-                            : "text-black"
-                        }`}
+                        className={`block py-1 px-2 rounded hover:bg-gray-100 ${isActiveLink(link.href)
+                          ? "text-[#FF7043] font-medium"
+                          : "text-black"
+                          }`}
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         {link.name}
