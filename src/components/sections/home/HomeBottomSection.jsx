@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Container from "@/components/layout/Container";
 
-const Bottom = () => {
+const HomeBottomSection = () => {
   return (
     <Container className=" pt-20 md:pt-20 pb-16 px-4 md:px-16">
       <div className="flex flex-col md:flex-row items-center gap-5">
@@ -32,4 +32,4 @@ const Bottom = () => {
   );
 };
 
-export default Bottom;
+export default HomeBottomSection;

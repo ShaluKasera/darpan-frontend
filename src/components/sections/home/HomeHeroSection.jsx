@@ -1,15 +1,18 @@
+'use client';
+import { useRouter } from 'next/navigation';
 import React from "react";
 import Button from "@/components/atoms/Button";
 import Container from "@/components/layout/Container";
 
-const Hero = () => {
+const HomeHeroSection = () => {
+  const router = useRouter();
   return (
     <section
       className="relative w-full h-[90vh] bg-cover bg-center text-white flex items-center justify-center"
       style={{ backgroundImage: `url('/images/dummy.jpg')` }}
     >
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-40 md:bg-opacity-10 z-0" />
+      <div className="absolute inset-0 bg-black/30 md:bg-opacity-10 z-0" />
 
       {/* Hero Content */}
       <Container>
@@ -23,14 +26,14 @@ const Hero = () => {
             community.
           </p>
           <div className="flex justify-center">
-            <Button text="Explore" className="w-full sm:w-[200px]" />
+            <Button text="Explore" className="w-full sm:w-[200px]" onClick={() => router.push('/about')} />
           </div>
         </div>
       </Container>
 
       {/* Stats Card */}
       <Container>
-        <div className="absolute left-1/2 transform -translate-x-1/2 bottom-[-100px] w-full max-w-6xl bg-[#FFE8DC] text-black flex flex-col md:flex-row justify-between items-center shadow-lg rounded-md z-20 p-4 md:p-0 gap-4 md:gap-0">
+        <div className="absolute left-1/2 transform -translate-x-1/2 bottom-[-60px] w-full max-w-6xl bg-[#FFE8DC] text-black flex flex-col md:flex-row justify-between items-center shadow-lg rounded-md z-20 p-4 md:p-0 gap-4 md:gap-0">
           {/* Stat 1 */}
           <div className="text-center py-4 px-4 md:px-10 w-full md:w-auto">
             <p className="text-3xl md:text-4xl font-bold text-[#FF7043]">1K+</p>
@@ -53,7 +56,7 @@ const Hero = () => {
           </div>
 
           {/* Goal Box */}
-          <div className="bg-[#FF7043] py-6 px-4 md:px-10 rounded-md text-white font-semibold text-center text-xs sm:text-sm w-full md:w-auto shadow-md">
+          <div className="bg-[#FF7043] py-7 px-4 md:px-10 rounded-md text-white font-semibold text-center text-xs sm:text-sm w-full md:w-auto shadow-md">
             Our goal to help <br /> underprivileged students
             <div className="h-[4px] w-[60px] bg-yellow-500 mx-auto my-2 rounded" />
           </div>
@@ -63,4 +66,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HomeHeroSection;

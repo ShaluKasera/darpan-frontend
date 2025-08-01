@@ -1,19 +1,19 @@
-import About from "@/components/sections/home/About";
-import Bottom from "@/components/sections/home/Bottom";
-import Features from "@/components/sections/home/Features";
-import Gallery from "@/components/sections/home/Gallery";
-import Hero from "@/components/sections/home/hero";
-import Students from "@/components/sections/home/Students";
+import HomeAboutSection from "@/components/sections/home/HomeAboutSection";
+import HomeBottomSection from "@/components/sections/home/HomeBottomSection";
+import HomeFeaturesSection from "@/components/sections/home/HomeFeaturesSection";
+import HomeGallerySection from "@/components/sections/home/HomeGallerySection";
+import HomeHeroSection from "@/components/sections/home/HomeHeroSection";
+import HomeStudentsSection from "@/components/sections/home/HomeStudentsSection";
 
 export default function Home() {
   return (
     <div>
-      <Hero />
-      <About />
-      <Features/>
-      <Students/>
-      <Gallery/>
-      <Bottom/>
+      <HomeHeroSection />
+      <HomeAboutSection />
+      <HomeFeaturesSection/>
+      <HomeStudentsSection/>
+      <HomeGallerySection/>
+      <HomeBottomSection/>
     </div>
   );
 }

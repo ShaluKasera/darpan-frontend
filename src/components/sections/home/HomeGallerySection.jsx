@@ -1,8 +1,6 @@
+"use client"
 import React from 'react';
-import StudentCard from '@/components/cards/StudentCard';
-import Container from '@/components/layout/Container';
-import Link from 'next/link';
-import { IoArrowForwardCircleOutline } from 'react-icons/io5';
+import { useRouter } from 'next/navigation';
 import HomeGalleryCard from '@/components/cards/HomeGalleryCard';
 import Button from '@/components/atoms/Button';
 
@@ -25,7 +23,8 @@ const gallery = [
     },
 ];
 
-const Gallery = () => {
+const HomeGallerySection = () => {
+    const router = useRouter();
     return (
 
         <section className="py-10 px-8 md:px-32  bg-[#FBF9F6] ">
@@ -50,11 +49,15 @@ const Gallery = () => {
             </div>
 
             <div className="flex justify-center mb-10">
-                <Button className="w-[150px]" text="View Gallery" />
+                <Button
+                    className="w-[150px]"
+                    text="View Gallery"
+                    onClick={() => router.push('/gallery')}
+                />
             </div>
         </section>
 
     );
 };
 
-export default Gallery;
+export default HomeGallerySection;

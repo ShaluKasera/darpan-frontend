@@ -6,7 +6,7 @@ import Button from "../atoms/Button";
 const Footer = () => {
   return (
     <div className="bg-[#212121] text-white py-8 px-4">
-      <Container className="flex flex-col md:flex-row justify-between gap-8">
+      <Container className="flex flex-col md:flex-row justify-between gap-8 px-10">
         {/* Contact Us */}
         <div className="md:w-1/3 w-full text-center md:text-left">
           <p className="text-2xl font-bold mb-2 ">Contact Us</p>

@@ -1,10 +1,12 @@
-// components/About.jsx
+'use client';
+import { useRouter } from 'next/navigation';
 import React from "react";
 import Image from "next/image";
 import Button from "@/components/atoms/Button";
 import Container from "@/components/layout/Container";
 
-const About = () => {
+const HomeAboutSection = () => {
+    const router = useRouter();
   return (
     <Container className=" pt-32 md:pt-40 pb-16 px-4 md:px-16">
       <div className="flex flex-col md:flex-row items-center gap-5">
@@ -31,6 +33,7 @@ const About = () => {
           <Button
             text="Read More"
             className="bg-[#FF7043] w-[150px] text-white px-5 py-2 rounded font-semibold hover:bg-[#e25f32] transition"
+            onClick={() => router.push('/about')}
           />
         </div>
       </div>
@@ -38,4 +41,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default HomeAboutSection;

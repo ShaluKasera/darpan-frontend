@@ -16,7 +16,7 @@ import { usePathname } from "next/navigation";
 const Header = () => {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null); // for mobile submenu toggle
 
   const navLinks = [
     { name: "Home", href: "/" },
@@ -37,14 +37,22 @@ const Header = () => {
         { name: "Students", href: "/about/students" },
         { name: "Volunteers", href: "/about/volunteers" },
         { name: "Alumni", href: "/about/alumni" },
+        { name: "Facutly-in-charge", href: "/about/pic" },
         { name: "About Us", href: "/about" },
       ],
     },
     { name: "Classroom", href: "/classroom" },
   ];
 
+  const toggleDropdown = (name) => {
+    setOpenDropdown((prev) => (prev === name ? null : name));
+  };
+
+  const isActiveLink = (href) =>
+    pathname === href || pathname.startsWith(href + "/");
+
   return (
-    <div className="w-full fixed top-0 left-0  z-50 bg-[#FFE5D0]">
+    <div className="w-full fixed top-0 left-0 z-50 bg-[#FFE5D0]">
       {/* Top Bar */}
       <div className="w-full bg-[#FF7043] text-white text-sm">
         <Container className="flex flex-col md:flex-row justify-between items-center px-4 md:px-10 gap-2">
@@ -90,8 +98,11 @@ const Header = () => {
                   {link.submenu ? (
                     <>
                       <span
-                        className={`cursor-pointer hover:text-[#FF7043] transition-colors duration-200 ${pathname.startsWith("/about") ? "text-[#FF7043]" : "text-black"
-                          }`}
+                        className={`cursor-pointer hover:text-[#FF7043] transition-colors duration-200 ${
+                          pathname.startsWith("/" + link.name.toLowerCase())
+                            ? "text-[#FF7043]"
+                            : "text-black"
+                        }`}
                       >
                         {link.name}
                       </span>
@@ -100,7 +111,7 @@ const Header = () => {
                           <li key={sublink.href}>
                             <Link
                               href={sublink.href}
-                              className="block px-4 py-2 hover:bg-gray-100 text-sm whitespace-nowrap"
+                              className="block px-4 py-2 text-black hover:bg-gray-100 text-sm whitespace-nowrap"
                             >
                               {sublink.name}
                             </Link>
@@ -111,8 +122,9 @@ const Header = () => {
                   ) : (
                     <Link
                       href={link.href}
-                      className={`hover:text-[#FF7043] transition-colors duration-200 ${pathname === link.href ? "text-[#FF7043]" : "text-black"
-                        }`}
+                      className={`hover:text-[#FF7043] transition-colors duration-200 ${
+                        isActiveLink(link.href) ? "text-[#FF7043]" : "text-black"
+                      }`}
                     >
                       {link.name}
                     </Link>
@@ -122,13 +134,13 @@ const Header = () => {
             </ul>
           </div>
 
-          {/* Desktop Login */}
+          {/* Desktop Login Button */}
           <div className="hidden md:flex items-center">
             <Button text={"Login"} />
           </div>
         </div>
 
-        {/* Mobile Nav Dropdown */}
+        {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden mt-4 border-t border-[#FF7043] py-2 rounded">
             <ul className="flex flex-col gap-1 px-4">
@@ -138,8 +150,11 @@ const Header = () => {
                     <li>
                       <Link
                         href={link.href}
-                        className={`block py-1 px-2 rounded hover:bg-gray-100 ${pathname === link.href ? "text-[#FF7043] font-medium" : "text-black"
-                          }`}
+                        className={`block py-1 px-2 rounded hover:bg-gray-100 ${
+                          isActiveLink(link.href)
+                            ? "text-[#FF7043] font-medium"
+                            : "text-black"
+                        }`}
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         {link.name}
@@ -150,12 +165,12 @@ const Header = () => {
                       <li>
                         <button
                           className="w-full text-left py-1 px-2 rounded hover:bg-gray-100 text-black"
-                          onClick={() => setAboutDropdownOpen(!aboutDropdownOpen)}
+                          onClick={() => toggleDropdown(link.name)}
                         >
                           {link.name}
                         </button>
                       </li>
-                      {aboutDropdownOpen &&
+                      {openDropdown === link.name &&
                         link.submenu.map((sublink) => (
                           <li key={sublink.href}>
                             <Link

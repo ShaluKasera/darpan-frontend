@@ -23,7 +23,7 @@ const students = [
   },
 ];
 
-const Students = () => {
+const HomeStudentsSection = () => {
   return (
     <Container>
       <section className="py-10 px-8 mb-10">
@@ -33,20 +33,14 @@ const Students = () => {
         {/* View more right aligned */}
         <div className="flex justify-end mb-2 px-2">
           <Link
-            href="/students"
+            href="/about/students"
             className="text-black text-sm inline-flex items-center gap-1 hover:text-[#FF7043] transition-all duration-300"
           >
             View more <IoArrowForwardCircleOutline className="text-lg" />
           </Link>
         </div>
 
-        {/* Student Cards */}
-        {/* <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
-          {students.map((student, idx) => (
-            <StudentCard key={idx} image={student.image} name={student.name} />
-          ))}
-        </div> */}
-
+       
          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {students.map((students, idx) => (
                     <div
@@ -66,4 +60,4 @@ const Students = () => {
   );
 };
 
-export default Students;
+export default HomeStudentsSection;
