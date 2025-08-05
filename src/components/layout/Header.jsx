@@ -33,7 +33,7 @@ const Header = () => {
         { name: "About Us", href: "/about" },
       ],
     },
-    { name: "Classroom", href: "/classroom" },
+    // { name: "Classroom", href: "/classroom" },
   ];
 
   const toggleDropdown = (name) => {
@@ -125,9 +125,9 @@ const Header = () => {
           </div>
 
           {/* Desktop Login Button */}
-          <div className="hidden md:flex items-center">
+          {/* <div className="hidden md:flex items-center">
             <Button text={"Login"} />
-          </div>
+          </div> */}
         </div>
 
         {/* Mobile Menu */}
@@ -175,9 +175,9 @@ const Header = () => {
                   )}
                 </React.Fragment>
               ))}
-              <li>
+              {/* <li>
                 <Button text="Login" className="mt-2" />
-              </li>
+              </li> */}
             </ul>
           </div>
         )}
