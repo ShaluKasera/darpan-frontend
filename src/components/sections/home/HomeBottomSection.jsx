@@ -20,7 +20,7 @@ const HomeBottomSection = () => {
         </div>
          <div className="w-full md:w-1/2">
           <Image
-            src="/images/dummy.jpg"
+            src="/images/homeImage2.jpeg"
             alt="About ICCHE"
             width={500}
             height={400}

@@ -105,7 +105,7 @@ export default function AlumnAboutPage() {
               placeholder="Search name"
               value={filters.fullName}
               onChange={(e) => setFilters({ ...filters, fullName: e.target.value })}
-              className="px-3 py-2 border rounded w-full md:w-72"
+              className="w-full md:max-w-xs px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:border-[#FF7043] transition"
             />
             {/* <input
               placeholder="Enrollment No"
@@ -117,13 +117,13 @@ export default function AlumnAboutPage() {
               placeholder="Department"
               value={filters.department}
               onChange={(e) => setFilters({ ...filters, department: e.target.value })}
-              className="px-3 py-2 border rounded w-full md:w-56"
+               className="w-full md:max-w-xs px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:border-[#FF7043] transition"
             />
             <input
               placeholder="Graduation Year"
               value={filters.graduationYear}
               onChange={(e) => setFilters({ ...filters, graduationYear: e.target.value })}
-              className="px-3 py-2 border rounded w-full md:w-40"
+               className="w-full md:max-w-xs px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:border-[#FF7043] transition"
             />
           </div>
 

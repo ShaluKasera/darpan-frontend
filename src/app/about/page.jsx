@@ -8,14 +8,14 @@ const aboutpage = () => {
       {/* Hero Section with Background Image */}
       <div className="relative h-[60vh] md:h-[70vh] w-full">
         <Image
-          src="/images/dummy.jpg"
+          src="/images/slater.jpeg"
           alt="Hero Background"
           layout="fill"
           objectFit="cover"
           objectPosition="center"
           className="z-0"
         />
-        <div className="absolute inset-0 bg-black/40 z-10" />
+        <div className="absolute inset-0 bg-black/50 z-10" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4 z-20">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 max-w-4xl leading-tight">
             ICCHE: Empowering Underprivileged Children Through Education
@@ -32,7 +32,7 @@ const aboutpage = () => {
         <div className="flex md:mx-10 mx-4  flex-col md:flex-row items-center gap-8 my-16">
           <div className="w-full md:w-1/2">
             <Image
-              src="/images/dummy.jpg"
+              src="/images/aboutImg1.jpeg"
               alt="About ICCHE"
               width={550}
               height={300}
@@ -50,7 +50,7 @@ const aboutpage = () => {
         <div className="flex md:mx-10 mx-4 flex-col md:flex-row-reverse items-center gap-8 my-16">
           <div className="w-full md:w-1/2">
             <Image
-              src="/images/dummy.jpg"
+              src="/images/aboutImage2.jpeg"
               alt="ICCHE Mission"
               width={550}
               height={300}
@@ -69,7 +69,7 @@ const aboutpage = () => {
         <div className="flex md:mx-10 mx-4  flex-col md:flex-row items-center gap-8 my-16">
           <div className="w-full md:w-1/2">
             <Image
-              src="/images/dummy.jpg"
+              src="/images/aboutImage3.jpeg"
               alt="About ICCHE"
               width={550}
               height={300}
@@ -89,7 +89,7 @@ const aboutpage = () => {
         <div className="flex md:mx-10 mx-4 flex-col md:flex-row-reverse items-center gap-8 my-16">
           <div className="w-full md:w-1/2">
             <Image
-              src="/images/dummy.jpg"
+              src="/images/aboutImage4.jpeg"
               alt="ICCHE Mission"
               width={550}
               height={300}
@@ -108,7 +108,7 @@ const aboutpage = () => {
         <div className="flex md:mx-10 mx-4  flex-col md:flex-row items-center gap-8 my-16">
           <div className="w-full md:w-1/2">
             <Image
-              src="/images/dummy.jpg"
+              src="/images/aboutImage5.jpeg"
               alt="About ICCHE"
               width={550}
               height={300}
@@ -127,7 +127,7 @@ const aboutpage = () => {
         <div className="flex md:mx-10 mx-4 flex-col md:flex-row-reverse items-center gap-8 my-16">
           <div className="w-full md:w-1/2">
             <Image
-              src="/images/dummy.jpg"
+              src="/images/aboutImage6.jpeg"
               alt="ICCHE Mission"
               width={550}
               height={300}
@@ -146,7 +146,7 @@ const aboutpage = () => {
         <div className="flex md:mx-10 mx-4  flex-col md:flex-row items-center gap-8 my-16">
           <div className="w-full md:w-1/2">
             <Image
-              src="/images/dummy.jpg"
+              src="/images/aboutImage7.jpeg"
               alt="About ICCHE"
               width={550}
               height={300}

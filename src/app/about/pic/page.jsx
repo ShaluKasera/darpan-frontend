@@ -6,20 +6,20 @@ import React from 'react'
 
 const PICAboutpage = () => {
     return (
-        <div className='pt-[120px]'>
+        <div className='pt-[120px] md:px-[200px]'>
             <Container>
                 <p className='text-[#FF7043] font-bold text-5xl text-center mb-5'>Facutly In-Chagre</p>
-                <div className="flex md:mx-10 mx-4  flex-col md:flex-row items-center my-16">
-                    <div className="w-full md:w-1/2">
+                <div className="flex md:mx-10 mx-4 flex-col md:flex-row gap-6 items-center my-16">
+                    <div className="max-w-[400px] md:w-1/2">
                         <Image
-                            src="/images/dummy.jpg"
+                            src="/images/pic.png"
                             alt="About ICCHE"
                             width={500}
-                            height={500}
-                            className="rounded-xl shadow-md"
+                            height={300}
+                            className="rounded-xl md:h-[450px] w-[400px] shadow-md"
                         />
                     </div>
-                    <div className="max-w-[400px] md:w-1/2">
+                   <div className="max-w-[400px] md:w-1/2">
                         <p className="text-3xl font-semibold mb-2">Dr. Vineeta Srivastava</p>
                         <hr className='text-gray-400 mb-5' />
                         <p className="text-gray-700 ">

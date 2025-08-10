@@ -129,10 +129,7 @@ const StudentAboutPage = () => {
               add: selectedStudent.address,
             }}
             onClose={() => setSelectedStudent(null)}
-            onDelete={() => {
-              alert(`Delete ${selectedStudent.fullName}`);
-              setSelectedStudent(null);
-            }}
+            
           />
         )}
       </Container>

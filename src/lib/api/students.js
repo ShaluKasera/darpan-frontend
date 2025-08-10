@@ -22,3 +22,18 @@ export const getStudentDetails = async (id) => {
     return null;
   }
 };
+
+export const getLatestStudents = async () => {
+  try {
+    const res = await axios.get(STUDENT_API, { 
+      params: { 
+        limit: 4, 
+        sort: 'createdAt' 
+      } 
+    });
+    return Array.isArray(res.data) ? res.data : [];
+  } catch (error) {
+    console.error("Error fetching latest students:", error);
+    return [];
+  }
+};
