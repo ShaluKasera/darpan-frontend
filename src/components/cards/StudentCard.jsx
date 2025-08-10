@@ -3,12 +3,12 @@ import Button from '../atoms/Button';
 
 const StudentCard = ({ image, name,onView }) => {
   return (
-    <div className="bg-[#FBF9F6] rounded-lg overflow-hidden pb-5">
+    <div className="bg-[#FBF9F6] w-[300px] h-[400px] rounded-lg overflow-hidden pb-5">
       <Image
         src={image}
         alt={name}
-        width={400}
-        height={300}
+        width={200}
+        height={200}
         className="w-full h-[70%] object-cover rounded-t-lg"
       />
       <p className="text-2xl text-center py-3 font-bold text-[#FF7043]">{name}</p>

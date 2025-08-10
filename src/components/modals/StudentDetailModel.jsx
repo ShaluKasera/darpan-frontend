@@ -1,6 +1,6 @@
 import React from 'react';
 
-const StudentDetailModal = ({ student, onClose, onDelete }) => {
+const StudentDetailModal = ({ student, onClose }) => {
   if (!student) return null;
 
   return (
@@ -11,12 +11,7 @@ const StudentDetailModal = ({ student, onClose, onDelete }) => {
           <div className="bg-[#FF7043] text-white px-3 py-1 rounded-md font-semibold text-sm">
             {student.id}
           </div>
-          <button
-            onClick={onDelete}
-            className="bg-[#FF7043] text-white px-3 py-1 rounded-md text-sm hover:bg-[#FF7043]"
-          >
-            Delete
-          </button>
+          
         </div>
 
         <div className="flex justify-center">

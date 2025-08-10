@@ -1,6 +1,6 @@
 import React from 'react';
 
-const VolunteerDetailModal = ({ volunteer, onClose, onEdit }) => {
+const VolunteerDetailModal = ({ volunteer, onClose }) => {
   if (!volunteer) return null;
 
   return (
@@ -10,39 +10,33 @@ const VolunteerDetailModal = ({ volunteer, onClose, onEdit }) => {
         
         <div className="flex justify-between items-center mb-4">
           <div className="bg-[#FF7043] text-white px-3 py-1 rounded-md font-semibold text-sm">
-            {volunteer.id}
+            {volunteer.enrollmentNo}
           </div>
-          <button
-            onClick={onEdit}
-            className="bg-[#FF7043] text-white px-3 py-1 rounded-md text-sm hover:bg-[#FF5722]"
-          >
-            Edit
-          </button>
+          
         </div>
 
       
         <div className="flex justify-center">
           <img
-            src={volunteer.image}
-            alt={volunteer.name}
+            src={volunteer.coverImageURL}
+            alt={volunteer.fullName}
             className="w-28 h-28 object-cover rounded-full border-2 border-gray-200"
           />
         </div>
 
     
-        <p className="text-center text-[#FF7043] text-3xl font-bold mt-3">{volunteer.name}</p>
+        <p className="text-center text-[#FF7043] text-3xl font-bold mt-3">{volunteer.fullName}</p>
 
         <div className="bg-yellow-300 h-1.5 w-[120px] mx-auto my-3 rounded-full" />
 
       
         <div className="text-gray-700 text-[15px] flex flex-col gap-3 px-5 mb-5">
-          <div><strong>Phone:</strong> {volunteer.phone}</div>
-          <div><strong>Enrollment ID:</strong> {volunteer.enrollmentId}</div>
+          <div><strong>Phone:</strong> {volunteer.contactNumber}</div>
           <div><strong>Gender:</strong> {volunteer.gender}</div>
           <div><strong>Year:</strong> {volunteer.year}</div>
           <div><strong>Department:</strong> {volunteer.department}</div>
           <div><strong>Email:</strong> {volunteer.email}</div>
-          <div><strong>Residence:</strong> {volunteer.residence}</div>
+          <div><strong>Residence:</strong> {volunteer.hostelName}</div>
         </div>
 
     

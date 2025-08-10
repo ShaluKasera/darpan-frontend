@@ -33,22 +33,22 @@ const PICAboutpage = () => {
                         </p>
                         <ul className='flex mt-3 md:text-xl gap-5'>
                             <li>
-                                <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer">
+                                <a href="https://www.instagram.com/icche.iiests/" target="_blank" rel="noopener noreferrer">
                                     <FaInstagram className="hover:text-pink-500 transition-colors duration-200" />
                                 </a>
                             </li>
                             <li>
-                                <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+                                <a href="https://www.linkedin.com/company/icche-iiest/" target="_blank" rel="noopener noreferrer">
                                     <FaLinkedin className="hover:text-blue-600 transition-colors duration-200" />
                                 </a>
                             </li>
                             <li>
-                                <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer">
+                                <a href="https://www.facebook.com/icchesistac" target="_blank" rel="noopener noreferrer">
                                     <FaSquareFacebook className="hover:text-blue-500 transition-colors duration-200" />
                                 </a>
                             </li>
                         </ul>
-                        <Button text={"Edit Profile"} className={"mt-10 w-[150px]"} />
+                        
                     </div>
                 </div>
             </Container>
